@@ -1,0 +1,146 @@
+
+GET http://localhost:4000/user-api/user
+
+###
+POST http://localhost:4000/user-api/register
+Content-Type: application/json
+
+{
+    "userType":"user",
+    "username":"badhri",
+    "password":"badhri",
+    "email":"badhri@gmail.com"
+}
+
+###
+POST http://localhost:4000/user-api/login
+Content-Type: application/json
+
+{
+    "userType":"user",
+    "username":"badhri",
+    "password":"badhri"
+}
+
+###
+GET http://localhost:4000/user-api/articles
+
+
+
+### writing comments
+
+POST http://localhost:4000/user-api/comment/1740675261
+Content-Type: application/json
+
+{
+    "username":"Surya",
+    "comment":"super ra bittu"
+}
+
+
+
+
+
+
+
+
+
+//authors.......
+
+###
+GET http://localhost:4000/author-api/author
+
+###
+POST http://localhost:4000/author-api/register
+Content-Type: application/json
+
+{
+    "userType":"author",
+    "username":"Vikas",
+    "password":"Vikas",
+    "email":"vikas@gmail.com"
+}
+
+###
+POST http://localhost:4000/author-api/login
+Content-Type: application/json
+
+{
+    "userType":"author",
+    "username":"badhri",
+    "password":"badhri"
+}
+
+###
+POST http://localhost:4000/author-api/article
+Content-Type: application/json
+
+{
+    "articleId":"{{$timestamp}}",
+    "title":"Fundamentals of JavaScript",
+    "category":"programming",
+    "content":"JavaScript is a scripting language that enables you to create dynamically updating content, control multimedia, animate images, and pretty much everything else.",
+    "dateOfCreation":"{{$datetime iso8601}}",
+    "dateOfModification":"{{$datetime iso8601}}",
+    "username":"sukumar",
+    "comments":[ ],
+    "status":"true"
+}
+
+
+
+###
+
+PUT http://localhost:4000/author-api/article
+Content-Type: application/json
+
+{
+    "articleId":"1740675382",
+    "title":"Fundamentals of JavaScript",
+    "category":"programming",
+    "content":"JavaScript is a scripting language that enables you to create dynamically updating content, control multimedia, animate images.",
+    "dateOfCreation":"2025-02-21T16:51:49.316Z",
+    "dateOfModification":"{{$datetime iso8601}}",
+    "username":"trivikram",
+    "comments":[ ],
+    "status":"true"
+}
+
+
+###
+
+PUT http://localhost:4000/author-api/articleremove
+Content-Type: application/json
+
+{
+    "articleId":"1740675382",
+    "title":"Fundamentals of JavaScript",
+    "category":"programming",
+    "content":"JavaScript is a scripting language that enables you to create dynamically updating content, control multimedia, animate images.",
+    "dateOfCreation":"2025-02-21T16:51:49.316Z",
+    "dateOfModification":"{{$datetime iso8601}}",
+    "username":"trivikram",
+    "comments":[ ],
+    "status":"true"
+}
+
+//read articles from authors
+###
+GET http://localhost:4000/author-api/article/sukumar
+
+
+
+
+
+
+
+
+
+
+
+
+
+//admins........
+
+###
+GET http://localhost:4000/admin-api/admin

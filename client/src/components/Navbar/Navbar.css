@@ -1,0 +1,10 @@
+.Nav{
+    display: flex;
+    list-style-type: none;
+    gap :20px;
+    justify-content: flex-end;
+    background-color: #333333;
+    color: goldenrod;
+    padding: 30px;
+    font-size: 1.5rem;
+}
