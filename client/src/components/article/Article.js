@@ -97,7 +97,8 @@ function Article() {
         <>
           <div className="d-flex justify-content-between">
             <div>
-              <p className="display-3 me-4">{state.title}</p>
+              <p className="display-4 me-4">{state.title}</p>
+              
               <span className="py-3">
                 <small className=" text-secondary me-4">
                   <FcCalendar className="fs-4" />
